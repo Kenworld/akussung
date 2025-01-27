@@ -1,164 +1,112 @@
 :root {
-  --primary-color: #4caf50;
-  --dark-color: #000;
-  --light-color: #fff;
+  --fb-blue: #1877f2;
+  --fb-hover: #166fe5;
+  --fb-bg: #f0f2f5;
 }
 
-/* General Styles */
 body {
-  font-family: "Arial", sans-serif;
+  background-color: var(--fb-bg);
 }
 
-section {
-  padding: 100px 0;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-/* Navigation */
 .navbar {
-  background-color: var(--dark-color);
-  padding: 20px 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand {
-  color: var(--primary-color);
-  font-weight: bold;
+.search-bar {
+  background-color: #f0f2f5;
+  border-radius: 20px;
+  padding: 5px 15px;
 }
 
-.nav-link {
-  color: var(--light-color) !important;
-  margin: 0 15px;
+.profile-section {
+  position: relative;
+  margin-bottom: 80px;
 }
 
-.hire-btn {
-  background-color: var(--primary-color);
-  border-radius: 25px;
-  padding: 8px 25px !important;
+.cover-photo {
+  height: 350px;
+  background-color: #e9ecef;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
 }
 
-/* Hero Section */
-.hero {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  padding-top: 150px;
-}
-
-.highlight {
-  color: var(--primary-color);
-}
-
-.profile-img {
-  width: 300px;
-  height: 300px;
+.profile-picture {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 168px;
+  height: 168px;
+  border: 5px solid white;
   border-radius: 50%;
-  border: 5px solid var(--primary-color);
+  background-color: #e9ecef;
 }
 
-.cta-buttons {
-  margin-top: 30px;
+.sidebar {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+.project-image {
+  width: 100%;
+  height: 200px;
+  background-color: #e9ecef;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
+  background-color: var(--fb-blue);
+  border-color: var(--fb-blue);
 }
 
-.btn-outline {
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 12px 30px;
-  border-radius: 25px;
-  margin-left: 15px;
+.btn-primary:hover {
+  background-color: var(--fb-hover);
+  border-color: var(--fb-hover);
 }
 
-/* About Section */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.skill-item {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-.skill-item i {
-  color: var(--primary-color);
-  margin-right: 10px;
-}
-
-/* Projects Section */
-.project-card {
-  background-color: var(--light-color);
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.project-info {
-  padding: 20px;
-}
-
-.platform {
-  background-color: #e8f5e9;
-  color: var(--primary-color);
+.skill-badge {
+  background-color: var(--fb-bg);
+  color: var(--fb-blue);
   padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 14px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
 }
 
-.technologies span {
-  background-color: #f8f9fa;
-  padding: 5px 15px;
-  border-radius: 15px;
-  margin-right: 10px;
-  font-size: 14px;
-}
-.technologies img {
-  width: 30px;
-  height: 30px;
-}
-/* Footer */
-footer {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  padding: 50px 0;
-  text-align: center;
-}
+@media (max-width: 768px) {
+  .sidebar {
+    margin-top: 20px;
+  }
 
-.social-links a {
-  color: var(--light-color);
-  margin: 0 15px;
-  font-size: 24px;
-}
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    bottom: -35px;
+  }
 
-/* WhatsApp Float */
-.whatsapp-float {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background-color: #25d366;
-  color: var(--light-color);
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  line-height: 60px;
-  z-index: 100;
+  .cover-photo {
+    height: 200px;
+  }
 }
